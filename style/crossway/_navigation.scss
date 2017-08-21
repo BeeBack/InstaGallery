@@ -1,0 +1,127 @@
+.navigation {
+    z-index: 10;
+    width: 100%;
+    letter-spacing: 0.015em;
+    @extend %clearfix;
+
+    // Nav Style 1
+    &.style-1 {
+        font-size: $fontSizeNav;
+        top: 0;
+
+        .sub-header {
+            height: $subHeaderSize;
+            line-height: $subHeaderSize;
+            font-size: .8*$fontSize;
+            color: $textColorLight;
+        }
+
+        nav {
+            height: $navSizeMobile;
+
+            .navbar-brand {
+                color: $textColorDark;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            ul {
+                text-transform: uppercase;
+
+                li {
+                    a {
+                        color: $textColor;
+
+                        &:hover {
+                            color: $textColorDark;
+                        }
+                    }
+
+                    .nav-button {
+                        margin-left: $padding-xs;
+                        color: white;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    text-transform: none;
+                    border: 1px solid $borderColor;
+                    font-size: $fontSizeNav;
+                    color: $textColor;
+                    @include border-radius(5px);
+                    @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.08));
+
+                    .dropdown-item {
+                        padding: $padding-xs $padding-lg;
+                    }
+                }
+            }
+        }
+    }
+
+    // Nav Style 1
+    &.style-2 {
+        background: $navBgColor;
+        color: $navTextColor;
+        @include box-shadow(0 1px 1px rgba(0,0,0,0.1));
+
+        .sub-header {
+            border-top: 2px solid $primaryColor;
+            border-bottom: 1px solid $borderColor;
+            height: $subHeaderSize;
+            line-height: $subHeaderSize;
+            font-size: .8*$fontSize;
+            color: $textColorLight;
+        }
+
+        nav {
+            height: $navSize;
+            text-transform: uppercase;
+
+            ul {
+                li {
+                    a {
+
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $grid-md - 1px) {
+        .sub-header {
+            text-align: center;
+
+            ul {
+                text-align: center;
+            }
+        }
+
+        nav {
+            padding: 5px 0 0;
+            z-index: 10;
+
+            .container {
+                width: 100%;
+
+                .navbar-brand {
+                    padding-left: 1rem;
+                }
+
+                .navbar-toggler {
+                    padding-top: 12px;
+                }
+            }
+
+            .navbar-collapse {
+                background: white;
+                z-index: 10;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}

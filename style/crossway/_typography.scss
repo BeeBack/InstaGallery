@@ -1,0 +1,65 @@
+.title {
+    display: block;
+    text-align: center;
+
+    &.style {
+        $b: &;
+
+        &-1 {
+            text-align: center;
+
+            h1, h2, h3, h4, h5, h6 {
+                margin-bottom: $padding;
+            }
+
+            p {
+                font-size: 1.25*$fontSize;
+                font-weight: 300;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+
+                strong {
+                    font-weight: $fontNormal;
+                }
+            }
+        }
+
+        &-2 {
+            text-align: left;
+
+            h1, h2, h3, h4, h5, h6 {
+                position: relative;
+                display: block;
+                color: #3c88c6;
+                font-size: 3*$fontSize;
+                font-weight: $fontLight;
+                line-height: 1.4;
+                margin-bottom: $padding-xs;
+
+                small {
+                    display: block;
+                    font-size: 1.75*$fontSize;
+                    font-weight: $fontLight;
+                    line-height: 0.7;
+                    padding-left: 5px;
+                    letter-spacing: 1px;
+                    color: $textColorLight;
+                    background: none;
+                    -webkit-background-clip: initial;
+                    -webkit-text-fill-color: initial;
+                }
+
+                @media screen and (-webkit-min-device-pixel-ratio:0) {
+                    @include linear-gradient(90deg,#E30061 5%,#3C88C6 50%,#10dfdf 95%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.text-gradient {
+
+}

@@ -1,0 +1,170 @@
+.button {
+    position: relative;
+    border: 1px solid $borderColorDark;
+    color: $primaryColor;
+    display: inline-block;
+    font-size: $fontSize - 2px;
+    font-weight: $fontNormal;
+    margin: 0;
+    padding: 0 $padding-lg;
+    height: $inputSize;
+    line-height: $inputSize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+    @include border-radius(3px);
+    @include transition(all 200ms ease-in);
+    @include box-shadow(0 1px 2px rgba(0,0,0,.1));
+
+    i {
+        display: inline-block;
+        margin-right: $padding-sm;
+        //font-size: 1.15*$fontSize;
+    }
+
+    &:hover {
+        background: lighten($primaryColor, 2%);
+        color: $white;
+        border-color: lighten($primaryColor, 2%);
+        @include transform(translate(0, -3px));
+        @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+        @include transition(all 200ms ease-in);
+    }
+
+    &.button-disabled {
+        background: $bodyColor;
+        color: $textColor;
+        border: none;
+        cursor: not-allowed;
+        @include box-shadow(none);
+
+        &:hover {
+            @include transform(translate(0));
+            @include box-shadow(none);
+        }
+    }
+
+    &.button-primary {
+        background: $primaryColor;
+        color: white;
+        border: none;
+
+        &:hover {
+            background: lighten($primaryColor, 2%);
+        }
+    }
+
+    &.button-blue {
+        background: $tirtiaryColor;
+        color: white;
+        border: none;
+
+        &:hover {
+            background: lighten($tirtiaryColor, 2%);
+        }
+    }
+
+    &.button-green {
+        background: $greenAlert;
+        color: white;
+        border: none;
+
+        &:hover {
+            background: darken($greenAlert, 5%);
+        }
+    }
+
+    &.button-red {
+        background: $redAlert;
+        color: white;
+        border: none;
+
+        &:hover {
+            background: darken($redAlert, 5%);
+        }
+    }
+
+    &.button-white {
+        background: $white;
+        color: $primaryColor;
+        border: none;
+
+        &:hover {
+            background: darken($white, 5%);
+        }
+    }
+
+    &.button-facebook {
+        background: $facebook;
+        color: white;
+        border: none;
+
+        &:hover {
+            background: lighten($facebook, 2%);
+        }
+    }
+
+    &.button-has-icon, &.has-icon {
+        padding: 0 $padding-lg 0 ($inputSize + $padding);
+
+        i {
+            display: block;
+            background: rgba(0,0,0,0.1);
+            width: $inputSize;
+            height: $inputSize;
+            line-height: $inputSize;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+        }
+    }
+
+    &.button-xs {
+        height: $inputSizeXs;
+        line-height: $inputSizeXs;
+        font-size: 12px;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeSm + $padding);
+
+            i {
+                width: $inputSizeSm;
+                height: $inputSizeSm;
+                line-height: $inputSizeSm;
+            }
+        }
+    }
+
+    &.button-sm {
+        height: $inputSizeSm;
+        line-height: $inputSizeSm;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeSm + $padding);
+
+            i {
+                width: $inputSizeSm;
+                height: $inputSizeSm;
+                line-height: $inputSizeSm;
+            }
+        }
+    }
+
+    &.button-lg {
+        height: $inputSizeLg;
+        line-height: $inputSizeLg;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeLg + $padding);
+
+            i {
+                width: $inputSizeLg;
+                height: $inputSizeLg;
+                line-height: $inputSizeLg;
+            }
+        }
+    }
+}

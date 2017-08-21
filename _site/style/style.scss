@@ -1,0 +1,212 @@
+/*
+* Theme: CrossWay Framework
+* Author: FWPolice
+* Author URL: http://crossway.fwpolice.com
+*/
+
+/** Import **/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+@import "assets/variables";
+@import "assets/mixins";
+@import "base";
+@import "helpers";
+
+.container-fluid {
+    width: 100%;
+}
+
+nav {
+    height: $navSize;
+    background: white;
+    @include box-shadow($boxShadow);
+
+    .logo {
+        img {
+            display: inline-block;
+            max-height: 30px;
+        }
+    }
+
+    .company {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    a {
+        font-weight: normal;
+    }
+}
+
+
+
+
+
+#instafeed {
+    margin: .5rem;
+
+    a {
+        color: $textColor;
+        display: inline-block;
+        margin: $padding-sm;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        background: white;
+        width: calc(100% / 4 - (2*#{$padding-sm}));
+        @include box-shadow($boxShadow);
+        @include border-radius(4px);
+        @include transition(all 200ms ease-in);
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .filter {
+            position: absolute;
+            display: block;
+            font-size: $fontSizeSmall;
+            padding: $padding-xs;
+            background: $blueAlert;
+            color: white;
+            width: 150px;
+            top: 12px;
+            right: -40px;
+            text-align: center;
+            @include transform(rotate(45deg));
+            @include box-shadow($boxShadowHover);
+        }
+
+        .info {
+            height: auto;
+            padding: $padding;
+
+            p {
+                font-size: $fontSize;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0;
+
+                &.caption {
+
+                }
+
+                &.location, &.date, &.likes {
+                    font-size: $fontSizeSmall;
+                    color: $textColorLight;
+
+                    .hidden-icon {
+                        display: none;
+                    }
+                }
+
+                &.likes {
+                    display: inline-block;
+                    float: right;
+
+                    i {
+                        display: inline-block;
+                        margin-right: $padding-xs;
+                        color: $redAlert;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            @include opacity(1);
+            @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+            @include transition(all 200ms ease-in);
+
+            .info {
+                p {
+                    color: $textColorDark;
+
+
+                    &.location, &.date, &.likes {
+                        color: $textColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#more, #nomore {
+    text-align: center;
+
+    p {
+        display: inline-block;
+        border: 1px solid $borderColor;
+        padding: $padding-sm $padding-lg;
+        margin-top: $padding-xl;
+        background: white;
+        @include transition(all 200ms ease-in);
+        @include box-shadow($boxShadow);
+
+        i {
+            display: inline-block;
+            margin-right: $padding;
+        }
+    }
+}
+
+#more {
+    p {
+        cursor: pointer;
+
+        &:hover {
+            background: lighten($primaryColor, 2%);
+            color: $white;
+            @include transform(translate(0, -3px));
+            @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+            @include transition(all 200ms ease-in);
+        }
+    }
+}
+
+#nomore {
+    p {
+        cursor: not-allowed;
+    }
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1400px) {
+  #instafeed a {
+    width: calc(100% / 5 - (2*#{$padding-sm}));
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #instafeed a {
+    width: calc(100% / 3 - (2*#{$padding-sm}));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #instafeed a {
+    width: calc(100% / 2 - (2*#{$padding-sm}));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #instafeed a {
+    width: calc(100% - (2*#{$padding-sm}));
+  }
+}
+
+/** Footer **/
+
+footer {
+    text-align: center;
+    padding: 2*$padding-xl 0 $padding-xl;
+    font-size: $fontSizeSmall;
+    @include opacity(0.85);
+}

@@ -1,0 +1,204 @@
+.service {
+
+    .card {
+        border: none;
+        background: transparent;
+    }
+
+    &.style {
+        $b: &;
+
+        &-1 {
+            .card {
+                position: relative;
+                margin: $padding 0;
+
+                .card-icon {
+                    display: block;
+                    font-size: 30px;
+                    color: $primaryColor;
+                }
+
+                .card-block {
+                    padding: 0;
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        color: $textColorLight;
+                    }
+                }
+            }
+        }
+
+        &-2 {
+            .card {
+                position: relative;
+                margin: $padding 0;
+                padding-left: $inputSizeLg;
+
+                .card-icon {
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    font-size: 30px;
+                    color: $primaryColor;
+                }
+
+                .card-block {
+                    padding: 0;
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        color: $textColorLight;
+                    }
+                }
+            }
+        }
+
+        &-3 {
+            .card {
+                position: relative;
+                margin: $padding 0;
+                padding: $padding-lg;
+                border: 1px dotted $borderColorDark;
+                @include transition(all 0.3s);
+
+                .card-icon {
+                    display: block;
+                    color: $primaryColor;
+                }
+
+                .card-block {
+                    padding: 0;
+                    @include transition(all 0.3s);
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        @include transition(all 0.3s);
+                    }
+
+                    p {
+                        color: $textColorLight;
+                        font-size: 14px;
+                        @include transition(all 0.3s);
+
+                        &.read-more {
+                            margin: 0;
+                            font-size: $fontSizeSmall;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: $primaryColor;
+                    border: 1px solid $primaryColor;
+                    @include transition(all 0.3s);
+
+                    .card-icon {
+                        color: white;
+                    }
+
+                    .card-block {
+                        padding: 0;
+                        color: white;
+                        @include transition(all 0.3s);
+
+                        h1, h2, h3, h4, h5, h6, p {
+                            color: white;
+                            @include transition(all 0.3s);
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-4 {
+            .card {
+                position: relative;
+                margin: $padding 0;
+                padding: $padding-xl $padding-xl $padding-xl 2*$inputSizeLg;
+                border: 1px dotted $borderColorDark;
+                @include transition(all 0.3s);
+
+                .card-icon {
+                    position: absolute;
+                    left: $padding-xl;
+                    top: $padding-lg;
+                    color: $primaryColor;
+                }
+
+                .card-block {
+                    padding: 0;
+                    @include transition(all 0.3s);
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        @include transition(all 0.3s);
+                    }
+
+                    p {
+                        color: $textColorLight;
+                        font-size: 14px;
+                        @include transition(all 0.3s);
+
+                        &.read-more {
+                            margin: 0;
+                            font-size: $fontSizeSmall;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: $primaryColor;
+                    border: 1px solid $primaryColor;
+                    @include transition(all 0.3s);
+
+                    .card-icon {
+                        color: white;
+                    }
+
+                    .card-block {
+                        padding: 0;
+                        color: white;
+                        @include transition(all 0.3s);
+
+                        h1, h2, h3, h4, h5, h6, p {
+                            color: white;
+                            @include transition(all 0.3s);
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

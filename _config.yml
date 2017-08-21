@@ -1,0 +1,34 @@
+# Setup
+name:                Flushing Club
+title:               Flushing Club
+tagline:             Discover the beauty of Flushing, NY.
+author:              BeeBack
+author_email:        sazzad@beeback.io
+url:                 http://flushing.club
+baseurl:             ''
+permalink:           pretty
+exclude:             [README.markdown]
+analytics_id:
+
+# Owner/author information
+owner:
+  name:           BeeBack
+  avatar:         logo.png
+  bio:            Loyalty service for SMB
+  email:          sazzad@beeback.io
+  twitter:        BeeBack
+  github:         iamshipon1988
+  instagram:      beebackapp
+  location:       "New York, NY"
+
+
+# Custom vars
+version:             1.0.1
+github:
+  repo:
+
+
+# Custom vars
+version:             1.0.1
+github:
+  repo:

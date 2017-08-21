@@ -1,0 +1,13 @@
+footer {
+    border-top: 1px solid $borderColor;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &.style-1 {
+        font-size: $fontSizeSmall;
+
+        ul {
+            text-transform: uppercase;
+        }
+    }
+}
