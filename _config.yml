@@ -4,7 +4,7 @@ title:               Flushing Club
 tagline:             Discover the beauty of Flushing, NY.
 author:              BeeBack
 author_email:        sazzad@beeback.io
-url:                 http://flushing.club
+url:                 https://beeback.github.io/InstaGallery/
 baseurl:             ''
 permalink:           pretty
 exclude:             [README.markdown]
