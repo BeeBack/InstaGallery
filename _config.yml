@@ -1,9 +1,9 @@
 # Setup
-name:                Flushing Club
-title:               Flushing Club
-tagline:             Discover the beauty of Flushing, NY.
+name:                InstaGallery
+title:               InstaGallery
+tagline:             A simple, easy to use Instagram gallery.
 author:              BeeBack
-author_email:        sazzad@beeback.io
+author_email:        support@beeback.io
 url:                 https://beeback.github.io/InstaGallery/
 baseurl:             ''
 permalink:           pretty
@@ -23,12 +23,6 @@ owner:
 
 
 # Custom vars
-version:             1.0.1
-github:
-  repo:
-
-
-# Custom vars
-version:             1.0.1
+version:             1.0.2
 github:
   repo:
