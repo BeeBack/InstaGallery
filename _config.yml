@@ -5,7 +5,7 @@ tagline:             A simple, easy to use Instagram gallery.
 author:              BeeBack
 author_email:        support@beeback.io
 url:                 https://beeback.github.io/InstaGallery/
-baseurl:             ''
+baseurl:             https://beeback.github.io/InstaGallery/
 permalink:           pretty
 exclude:             [README.markdown]
 analytics_id:
